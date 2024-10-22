@@ -2,7 +2,7 @@
 
 This is repo for Quiz purpose only.
 
-This repo contain Backend functions to perform CRUD of Blog.
+This repo contain Backend functions to perform CRUD of Ticket.
 
 ## Project setup
 
@@ -12,7 +12,20 @@ This repo contain Backend functions to perform CRUD of Blog.
 $ npm install
 ```
 
-2. Create new mysql database on your local (db name = `my_tickets_db`).
+2. Create new mysql database on your local (db name = `my_tickets_db`) and add these env to your local.
+
+```bash
+APP_NAME=
+DB_DATABASE=my_tickets_db
+DB_HOST=localhost
+DB_PASSWORD=
+DB_PORT=3306
+DB_USERNAME=
+JWT_EXPIRED_IN=30m
+JWT_SECRET=
+NODE_ENV=development
+PORT=3000
+```
 
 3. Run command to run migrations
 
