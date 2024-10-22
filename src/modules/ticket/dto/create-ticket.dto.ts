@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsString } from 'class-validator';
 
-export class CreateBlogDto {
+export class CreateTicketDto {
   @IsNotEmpty()
   @IsString()
   title: string;

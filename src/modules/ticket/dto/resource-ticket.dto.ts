@@ -1,6 +1,6 @@
-import { Blog } from '../../../databases/entities';
+import { Ticket } from '../../../databases/entities';
 
-export class ResourceBlogDto {
+export class ResourceTicketDto {
   id: string;
   userId: string;
   title: string;
@@ -9,8 +9,8 @@ export class ResourceBlogDto {
   updatedAt: Date;
   deletedAt?: Date | null;
 
-  static fromEntity(entity: Blog): ResourceBlogDto {
-    const result = new ResourceBlogDto();
+  static fromEntity(entity: Ticket): ResourceTicketDto {
+    const result = new ResourceTicketDto();
     result.id = entity.id;
     result.userId = entity.userId;
     result.title = entity.title;
@@ -22,7 +22,7 @@ export class ResourceBlogDto {
     return result;
   }
 
-  static fromEntities(entities: Blog[]): ResourceBlogDto[] {
+  static fromEntities(entities: Ticket[]): ResourceTicketDto[] {
     return entities.map((entity) => this.fromEntity(entity));
   }
 }

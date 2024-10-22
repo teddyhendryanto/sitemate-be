@@ -11,7 +11,7 @@ import {
   Relation,
   UpdateDateColumn,
 } from 'typeorm';
-import { Blog } from './blog.entity';
+import { Ticket } from './ticket.entity';
 
 @Entity({ name: 'users' })
 export class User extends BaseEntity {
@@ -37,7 +37,7 @@ export class User extends BaseEntity {
   @DeleteDateColumn({ name: 'deleted_at' })
   deletedAt?: Date;
 
-  @OneToMany(() => Blog, (blog) => blog.user)
+  @OneToMany(() => Ticket, (blog) => blog.user)
   @JoinColumn({ name: 'id', referencedColumnName: 'userId' })
-  blogs?: Relation<Blog[]>;
+  tickets?: Relation<Ticket[]>;
 }

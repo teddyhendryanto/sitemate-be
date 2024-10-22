@@ -5,8 +5,8 @@ import { AppConfig, routes } from './config';
 import { DatabaseModule } from './databases/database.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { EncryptionModule } from './modules/encryption/encryption.module';
+import { TicketModule } from './modules/ticket/ticket.module';
 import { UserModule } from './modules/user/user.module';
-import { BlogModule } from './modules/blog/blog.module';
 
 @Module({
   imports: [
@@ -16,7 +16,7 @@ import { BlogModule } from './modules/blog/blog.module';
     EncryptionModule,
     RouterModule.register(routes),
     UserModule,
-    BlogModule,
+    TicketModule,
   ],
   controllers: [],
   providers: [],

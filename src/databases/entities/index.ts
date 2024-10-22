@@ -1,2 +1,2 @@
-export * from './blog.entity';
+export * from './ticket.entity';
 export * from './user.entity';

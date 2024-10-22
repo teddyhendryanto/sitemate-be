@@ -11,8 +11,8 @@ import {
 } from 'typeorm';
 import { User } from './user.entity';
 
-@Entity({ name: 'blogs' })
-export class Blog {
+@Entity({ name: 'tickets' })
+export class Ticket {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -34,7 +34,7 @@ export class Blog {
   @DeleteDateColumn({ name: 'deleted_at', nullable: true })
   deletedAt?: Date;
 
-  @ManyToOne(() => User, (user) => user.blogs)
+  @ManyToOne(() => User, (user) => user.tickets)
   @JoinColumn({ name: 'id' })
   user: Relation<User>;
 }
